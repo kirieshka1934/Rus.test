@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_main__left_gl"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_main__right_gl"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75"
+        />
+
+    <Button
+        android:id="@+id/Button1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="@string/Главная"
+        app:layout_constraintBottom_toTopOf="@id/Button2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@id/activity_main__left_gl"
+        app:layout_constraintRight_toRightOf="@id/activity_main__right_gl"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Орфограммы"
+        android:padding="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/activity_main__left_gl"
+        app:layout_constraintRight_toRightOf="@id/activity_main__right_gl"
+        app:layout_constraintTop_toBottomOf="@id/Button1"
+        app:layout_constraintBottom_toTopOf="@id/Button3"/>
+
+    <Button
+        android:id="@+id/Button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Описание"
+        android:padding="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/activity_main__left_gl"
+        app:layout_constraintRight_toRightOf="@id/activity_main__right_gl"
+        app:layout_constraintTop_toBottomOf="@id/Button2"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
